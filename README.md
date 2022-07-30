@@ -1,2 +1,3 @@
-# merx_test
-A Merx for testing EMI
+# Test Merx
+
+Prints Transaction arguments.
