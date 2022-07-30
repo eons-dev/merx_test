@@ -19,10 +19,10 @@ class test(Merx):
             if (epitome.path is None):
                 this.gotAllTomes = False
             else:
-                if (not len(epitome.installed_at)):
-                    record.installed_at = "NOT INSTALLED"
-                if (not len(record.additional_notes)):
-                    record.additional_notes.append("Test Retrieval Successful")
+                if (epitome.installed_at is None or not len(epitome.installed_at)):
+                    epitome.installed_at = "NOT INSTALLED"
+                if (epitome.additional_notes is None or not len(epitome.additional_notes)):
+                    epitome.additional_notes="Test Retrieval Successful"
                 this.catalog.add(epitome)
 
     # Required Merx method. See that class for details.
